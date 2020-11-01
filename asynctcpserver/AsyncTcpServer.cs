@@ -43,11 +43,11 @@ namespace asynctcpserver
             else if (!tcpClient.Connected)
             {
                 tcpClient = Listener.AcceptTcpClient();
+                RunServerDelegate serverDelegate = new RunServerDelegate(BeginRunServer);
+                serverDelegate.BeginInvoke(new TcpClient(), RunServerCallback, new object[] { serverDelegate });
                 this.EndPointHistory.Add(new Tuple<IPAddress, DateTime, bool>(((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address, DateTime.Now, true));
                 Console.WriteLine("Połączenie: \t" + ((IPEndPoint)tcpClient.Client.RemoteEndPoint).Address.ToString() + " : " + DateTime.Now.ToString());
             }
-            RunServerDelegate serverDelegate = new RunServerDelegate(BeginRunServer);
-            serverDelegate.BeginInvoke(new TcpClient(), RunServerCallback, new object[] { serverDelegate });
             NetworkStream str = tcpClient.GetStream();
             byte[] buffer = new byte[BufferSize];
             string message = String.Empty;
