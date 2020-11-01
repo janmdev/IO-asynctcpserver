@@ -10,26 +10,23 @@ namespace asynctcpserver
 {
     public abstract class TcpServer
     {
-        protected TcpListener listener;
-        protected TcpClient client;
-        protected byte[] buffer;
+        private TcpListener listener;
+        private int bufferSize;
+        private NetworkStream stream;
+        private List<Tuple<IPAddress, DateTime, bool>> endPointHistory;
+        protected NetworkStream Stream { get => stream; set => stream = value; }
+        protected List<Tuple<IPAddress, DateTime, bool>> EndPointHistory { get => endPointHistory; set => endPointHistory = value; }
+        protected int BufferSize { get => bufferSize; set => bufferSize = value; }
+        protected TcpListener Listener { get => listener; set => listener = value; }
 
         protected TcpServer(IPAddress iPAddress, int port, int bufferSize)
         {
-            listener = new TcpListener(iPAddress, port);
-            buffer = new byte[bufferSize];
+            Listener = new TcpListener(iPAddress, port);
+            this.BufferSize = bufferSize;
+            EndPointHistory = new List<Tuple<IPAddress,DateTime, bool>>();
         }
 
         public abstract void RunServer();
-        public void StopServer()
-        {
-            try
-            {
-                client.Close();
-            }
-            catch(NullReferenceException )
-            {}
-        }
 
         protected int Silnia(int n)
         {

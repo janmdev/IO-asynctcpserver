@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\asynctcpserver\asynctcpserver.csproj">
+      <Project>{dfad7f56-2fb0-4368-a0d7-e70262460327}</Project>
+      <Name>asynctcpserver</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
