@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serverapp", "serverapp\serv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asynctcpserver", "asynctcpserver\asynctcpserver.csproj", "{DFAD7F56-2FB0-4368-A0D7-E70262460327}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A289B9A1-406B-469D-B136-1308F682A646}"
+	ProjectSection(SolutionItems) = preProject
+		schemat.jpg = schemat.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
