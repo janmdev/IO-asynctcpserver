@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serverapp", "serverapp\serverapp.csproj", "{D2B8ABC8-B869-4EB7-8E1A-B7E683F394D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asynctcpserver", "asynctcpserver\asynctcpserver.csproj", "{DFAD7F56-2FB0-4368-A0D7-E70262460327}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2B8ABC8-B869-4EB7-8E1A-B7E683F394D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B8ABC8-B869-4EB7-8E1A-B7E683F394D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B8ABC8-B869-4EB7-8E1A-B7E683F394D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B8ABC8-B869-4EB7-8E1A-B7E683F394D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFAD7F56-2FB0-4368-A0D7-E70262460327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFAD7F56-2FB0-4368-A0D7-E70262460327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFAD7F56-2FB0-4368-A0D7-E70262460327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFAD7F56-2FB0-4368-A0D7-E70262460327}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52CC958A-0C1D-40B3-AE17-3F4A91C041A0}
+	EndGlobalSection
+EndGlobal
